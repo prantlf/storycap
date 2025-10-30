@@ -1,4 +1,4 @@
-import { Story } from 'storycrawler';
+import { Story } from '@prantlf/storycrawler';
 import { ShardOptions } from './types.js';
 
 export const parseShardOptions = (arg: string): ShardOptions => {

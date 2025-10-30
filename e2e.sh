@@ -26,6 +26,10 @@ current_idx=${NODE_INDEX:-0}
 rm -rf __screenshots__
 mkdir -p __screenshots__/examples
 
+if [ ! -f node_modules/.bin/storycap ]; then
+  ln -s ../../packages/storycap/lib/node/cli.js node_modules/.bin/storycap
+fi
+
 if [ -n "$1" ]; then
   run $1
   if [ "$?" -gt 0 ]; then

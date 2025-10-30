@@ -13,8 +13,8 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: 'storycap', 
-        replacement: resolve(__dirname, 'node_modules', 'storycap', 'lib')
+        find: '@prantlf/storycap', 
+        replacement: resolve(import.meta.dirname, 'node_modules', '@prantlf', 'storycap', 'lib')
       }
     ]
   },

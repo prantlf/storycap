@@ -1,6 +1,6 @@
 {
-  "name": "storycap",
-  "version": "5.0.1",
+  "name": "@prantlf/storycap",
+  "version": "6.0.0",
   "description": "A Storybook addon, Save the screenshot image of your stories! via puppeteer.",
   "engines": {
     "node": ">=20.11"
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reg-viz/storycap.git"
+    "url": "git+https://github.com/prantlf/storycap.git"
   },
   "author": "tsuyoshiwada",
   "contributors": [
@@ -45,9 +45,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reg-viz/storycap/issues"
+    "url": "https://github.com/prantlf/storycap/issues"
   },
-  "homepage": "https://github.com/reg-viz/storycap#readme",
+  "homepage": "https://github.com/prantlf/storycap#readme",
   "files": [
     "lib",
     "lib-esm",
@@ -86,11 +86,11 @@
     "typescript": "5.9.3"
   },
   "dependencies": {
+    "@prantlf/storycrawler": "^6.0.0",
     "picomatch": "^4.0.3",
     "puppeteer-core": "^24.27.0",
     "rimraf": "^6.1.0",
     "sanitize-filename": "^1.6.3",
-    "storycrawler": "^5.0.1",
     "yargs": "^18.0.0"
   },
   "peerDependencies": {

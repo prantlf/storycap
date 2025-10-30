@@ -1,0 +1,16 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "search.exclude": {
+    "**/*.tsbuildinfo": true,
+    "**/lib": true,
+    "**/lib-esm/": true,
+    "__screenshot__": true,
+    "__screenshots__": true,
+    "storybook-static/": true
+  }
+}

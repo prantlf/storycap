@@ -14,7 +14,7 @@ Utilities to build Storybook crawling tools with Puppeteer.
 ## Install
 
 ```sh
-$ npm i storycrawler
+$ npm i @prantlf/storycrawler
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ import {
   StoryPreviewBrowser,
   MetricsWatcher,
   createExecutionService,
-} from 'storycrawler';
+} from '@prantlf/storycrawler';
 
 (async function () {
   // Connect to the target Storybook server.

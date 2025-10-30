@@ -1,5 +1,5 @@
 import picomatch from 'picomatch';
-import { StorybookConnection, StoriesBrowser, Story, sleep, ChromiumNotFoundError } from 'storycrawler';
+import { StorybookConnection, StoriesBrowser, Story, sleep, ChromiumNotFoundError } from '@prantlf/storycrawler';
 import { CapturingBrowser } from './capturing-browser.js';
 import { MainOptions, RunMode } from './types.js';
 import { FileSystem } from './file.js';

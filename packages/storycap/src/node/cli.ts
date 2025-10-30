@@ -2,7 +2,7 @@
 
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import { time, ChromeChannel, getDeviceDescriptors } from 'storycrawler';
+import { time, ChromeChannel, getDeviceDescriptors } from '@prantlf/storycrawler';
 import { main } from './main.js';
 import { MainOptions, ShardOptions } from './types.js';
 import { Logger } from './logger.js';

@@ -1,4 +1,4 @@
-import { withScreenshot } from 'storycap';
+import { withScreenshot } from '@prantlf/storycap';
 
 export const decorators = [
   withScreenshot,

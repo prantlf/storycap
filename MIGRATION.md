@@ -59,7 +59,7 @@ addDecorator(
 /* .storybook/config.js */
 
 import { addDecorator } from '@storybook/react';
-import { withScreenshot } from 'storycap';
+import { withScreenshot } from '@prantlf/storycap';
 
 addDecorator(
   withScreenshot({
@@ -74,7 +74,7 @@ You should replace import path if you configure screenshot behavior in each stor
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 // import { withScreenshot } from 'storybook-chrome-screenshot';
-import { withScreenshot } from 'storycap'; // <-
+import { withScreenshot } from '@prantlf/storycap'; // <-
 import { Button } from './Button';
 
 storiesOf('Button', module)
@@ -104,7 +104,7 @@ setScreenshotOptions({
 /* After */
 /* .storybook/config.js */
 import { addDecorator } from '@storybook/react';
-import { withScreenshot } from 'storycap';
+import { withScreenshot } from '@prantlf/storycap';
 
 addDecorator(
   withScreenshot({
@@ -214,7 +214,7 @@ You should replace it as the following:
 /* .storybook/config.js */
 
 import { addDecorator } from '@storybook/react';
-import { withScreenshot } from 'storycap';
+import { withScreenshot } from '@prantlf/storycap';
 
 addDecorator(withScreenshot({
   // Some screenshot options...
@@ -227,7 +227,7 @@ addDecorator(withScreenshot({
 /* .storybook/config.js */
 
 import { addDecorator, addParameters } from '@storybook/react';
-import { withScreenshot } from 'storycap';
+import { withScreenshot } from '@prantlf/storycap';
 
 addDecorator(withScreenshot);
 addParameters({

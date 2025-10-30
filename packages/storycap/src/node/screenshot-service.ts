@@ -1,4 +1,4 @@
-import { Story, createExecutionService, time } from 'storycrawler';
+import { Story, createExecutionService, time } from '@prantlf/storycrawler';
 import { CapturingBrowser } from './capturing-browser.js';
 import { FileSystem } from './file.js';
 import { Logger } from './logger.js';

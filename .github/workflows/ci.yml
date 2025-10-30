@@ -1,19 +1,26 @@
-name: Integrated Test
+name: Build, Test and Release
 
 on:
   push:
     branches:
-      - master
-      - next
+      - '**'
+    tags-ignore:
+      - '**'
+    paths-ignore:
+      - '**/*.md'
+      - LICENSE
   pull_request:
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
+permissions:
+  id-token: write
+  contents: write
 
+jobs:
+  build-test-release:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [20.x, 22.x, 24.x]
         example_dir:
           - examples/v9-managed-react
           - examples/v9-simple-react
@@ -21,16 +28,20 @@ jobs:
           - examples/v10-managed-react
           - examples/v10-simple-react
           - examples/v10-managed-vite5-react
-
     steps:
       - uses: actions/checkout@v5
-      - name: Use Node.js
-        uses: actions/setup-node@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
       - run: yarn build
+      - run: yarn test
       - run: yarn e2e ${{ matrix.example_dir }}
         env:
+          CI: true
+      - run: yarn deploy:ci
+        if: ${{ github.ref_name == 'master' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CI: true

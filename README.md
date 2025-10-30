@@ -3,9 +3,7 @@
 [storybook]: https://github.com/storybooks/storybook
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 
-![DEMO](https://raw.githubusercontent.com/reg-viz/storycap/artwork/demo_v2.gif)
-
-[![npm](https://img.shields.io/npm/v/storycap.svg?style=flat-square)](https://www.npmjs.com/package/storycap)
+![DEMO](https://raw.githubusercontent.com/prantlf/storycap/artwork/demo_v2.gif)
 
 > A [Storybook][storybook] Addon, Save the screenshot image of your stories :camera: via [Puppeteer][puppeteer].
 
@@ -58,13 +56,13 @@ It is primarily responsible for image generation necessary for Visual Testing su
 ## Install
 
 ```sh
-$ npm install storycap
+$ npm install @prantlf/storycap
 ```
 
 Or
 
 ```sh
-$ npm install storycap puppeteer
+$ npm install @prantlf/storycap puppeteer
 ```
 
 Installing puppeteer is optional. See [Chromium version](#chromium-version) to get more detail.
@@ -104,7 +102,7 @@ $ storycap https://next--storybookjs.netlify.app/vue-kitchen-sink/
 
 If you want to control how stories are captured (timing or size or etc...), use managed mode.
 
-First, add `storycap` to your Storybook config file:
+First, add `@prantlf/storycap` to your Storybook config file:
 
 ```js
 /* .storybook/main.js */
@@ -114,7 +112,7 @@ module.exports = {
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    'storycap', // <-- Add storycap
+    '@prantlf/storycap', // <-- Add @prantlf/storycap
   ],
 };
 ```
@@ -124,8 +122,7 @@ Next, use `withScreenshot` decorator to tell how Storycap captures your stories.
 ```js
 /* .storybook/preview.js */
 
-import { withScreenshot } from 'storycap';
-
+import { withScreenshot } from '@prantlf/storycap';
 export const decorators = [
   withScreenshot, // Registration the decorator is required
 ];
@@ -543,7 +540,7 @@ Another example, the following setting tells storycap to wait for resolving of `
 ```js
 /* .storybook/preview.js */
 
-import { withScreenshot } from 'storycap';
+import { withScreenshot } from '@prantlf/storycap';
 
 export const decorators = [withScreenshot];
 

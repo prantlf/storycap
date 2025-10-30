@@ -16,7 +16,7 @@ const argv = minimist(process.argv.slice(2));
  *
  * This script does:
  *
- * - emulate to `npm i storycap` under the Storybook example project
+ * - emulate to `npm i @prantlf/storycap` under the Storybook example project
  *   - copy package.json
  *   - copy built javascripts
  *   - create symlink .bin/storycap
@@ -31,7 +31,7 @@ async function main() {
   }
   const prjDir = path.resolve(import.meta.dirname, '../packages/storycap');
   const cwd = process.cwd();
-  const dist = path.resolve(cwd, target, 'node_modules/storycap');
+  const dist = path.resolve(cwd, target, 'node_modules/@prantlf/storycap');
   if (prjDir === dist) {
     console.error(`target dir shold not be "${prjDir}".`);
     return 1;

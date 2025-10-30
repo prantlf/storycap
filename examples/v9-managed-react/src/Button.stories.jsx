@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from './Button';
 import { action } from 'storybook/actions';
 
-import { isScreenshot } from 'storycap';
+import { isScreenshot } from '@prantlf/storycap';
 
 export default {
   title: 'Button',

@@ -9,7 +9,7 @@ import {
   ResourceWatcher,
   sleep,
   getDeviceDescriptors,
-} from 'storycrawler';
+} from '@prantlf/storycrawler';
 
 import { MainOptions, RunMode } from './types.js';
 import { VariantKey, ScreenshotOptions, StrictScreenshotOptions, Exposed } from '../shared/types.js';

@@ -1,5 +1,5 @@
 import { describe, it, expect } from '@jest/globals';
-import { Story } from 'storycrawler';
+import { Story } from '@prantlf/storycrawler';
 import { parseShardOptions, sortStories, shardStories } from './shard-utilities';
 
 describe(parseShardOptions, () => {

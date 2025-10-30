@@ -1,5 +1,5 @@
 {
-  "name": "storycap-root",
+  "name": "@prantlf/storycap-root",
   "private": true,
   "type": "module",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reg-viz/storycap.git"
+    "url": "git+https://github.com/prantlf/storycap.git"
   },
   "author": "tsuyoshiwada",
   "contributors": [
@@ -35,9 +35,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reg-viz/storycap/issues"
+    "url": "https://github.com/prantlf/storycap/issues"
   },
-  "homepage": "https://github.com/reg-viz/storycap#readme",
+  "homepage": "https://github.com/prantlf/storycap#readme",
   "devDependencies": {
     "copy-dir": "1.3.0",
     "eslint": "9.38.0",
