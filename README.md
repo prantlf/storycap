@@ -573,9 +573,11 @@ Storycap is tested with the followings versions:
 - Simple mode:
   - [x] Storybook v7.x
   - [x] Storybook v8.x
+  - [x] Storybook v9.x
 - Managed mode:
   - [x] Storybook v7.x
   - [x] Storybook v8.x
+  - [x] Storybook v9.x
 
 See also packages in `examples` directory.
 
