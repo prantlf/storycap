@@ -1,4 +1,4 @@
-import type { Browser as PuppeteerBrowser, Page, LaunchOptions, BrowserLaunchArgumentOptions } from 'puppeteer-core';
+import type { Browser as PuppeteerBrowser, Page, LaunchOptions } from 'puppeteer-core';
 import { sleep } from '../async-utils.js';
 import { findChrome } from '../find-chrome.js';
 import { ChromiumNotFoundError } from '../errors.js';
@@ -20,7 +20,7 @@ export interface BaseBrowserOptions {
    * Options to launch Puppeteer Browser instance.
    *
    **/
-  launchOptions?: LaunchOptions & BrowserLaunchArgumentOptions;
+  launchOptions?: LaunchOptions;
 
   /**
    *
@@ -106,7 +106,7 @@ export abstract class BaseBrowser {
       await this._page.close();
       await sleep(50);
       await this.browser.close();
-    } catch (e) {
+    } catch {
       // nothing to do
     }
   }

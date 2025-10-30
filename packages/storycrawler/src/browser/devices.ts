@@ -4,7 +4,7 @@
  *
  */
 export async function getDeviceDescriptors() {
-  const { default: pc } = await import('puppeteer-core')
-  const dd = pc.devices;
+  const pc = await import('puppeteer-core')
+  const dd = pc.KnownDevices;
   return Object.values(dd);
 }

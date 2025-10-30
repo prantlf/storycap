@@ -15,6 +15,7 @@ async function detectRunMode(storiesBrowser: StoriesBrowser, opt: MainOptions) {
 
   // We can check whether the secret value is set by `register.js` or not.
   const registered: boolean | undefined = await storiesBrowser.page.evaluate(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     () => (window as any).__STORYCAP_MANAGED_MODE_REGISTERED__,
   );
   const mode: RunMode = registered ? 'managed' : 'simple';

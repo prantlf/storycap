@@ -134,7 +134,7 @@ export class StorybookConnection {
     try {
       this.logger.debug('Shutdown storybook server', this.proc.pid);
       this.proc.kill('SIGINT');
-    } catch (e) {
+    } catch {
       // nothing todo
     }
     this._status = 'DISCONNECTED';

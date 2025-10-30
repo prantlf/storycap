@@ -102,6 +102,7 @@ export function mergeScreenshotOptions<T extends ScreenshotOptions>(base: T, fra
     }
   } else {
     if (!fragment.viewport) {
+      // nothing to do
     } else if (typeof fragment.viewport === 'object') {
       ret.viewport = {
         ...base.viewport,

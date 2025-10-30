@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import { StorybookConnection } from './storybook-connection.js';
 
 describe(StorybookConnection, () => {

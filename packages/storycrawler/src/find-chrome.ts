@@ -12,7 +12,7 @@ function canAccess(file: string) {
   try {
     fs.accessSync(file);
     return true;
-  } catch (e) {
+  } catch {
     return false;
   }
 }
@@ -32,7 +32,7 @@ function findChromeExecutables(folder: string) {
     // See https://github.com/GoogleChrome/chrome-launcher/issues/46 for more context.
     try {
       execPaths = execSync(`grep -ER "${chromeExecRegex}" ${folder} | awk -F '=' '{print $2}'`);
-    } catch (e) {
+    } catch {
       execPaths = execSync(`grep -Er "${chromeExecRegex}" ${folder} | awk -F '=' '{print $2}'`);
     }
 
@@ -84,6 +84,7 @@ function darwin(canary = false): string | undefined {
     '/Versions/A/Frameworks/LaunchServices.framework' +
     '/Versions/A/Support/lsregister';
   const grepexpr = canary ? 'google chrome canary' : 'google chrome';
+  // eslint-disable-next-line no-useless-escape
   const result = execSync(`${LSREGISTER} -dump  | grep -i \'${grepexpr}\\?.app$\' | awk \'{$1=""; print $0}\'`);
 
   const paths = result
@@ -97,7 +98,7 @@ function darwin(canary = false): string | undefined {
     const inst = path.join(p, canary ? '/Contents/MacOS/Google Chrome Canary' : '/Contents/MacOS/Google Chrome');
     if (canAccess(inst)) return inst;
   }
-  return;
+  return undefined;
 }
 
 /**
@@ -106,6 +107,7 @@ function darwin(canary = false): string | undefined {
  * 2. Look into the directories where .desktop are saved on gnome based distro's
  * 3. Look for google-chrome-stable & google-chrome executables by using the which command
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function linux(_canary = false) {
   let installations: string[] = [];
 
@@ -124,8 +126,8 @@ function linux(_canary = false) {
     try {
       const chromePath = execFileSync('which', [executable], { stdio: 'pipe' }).toString().split(newLineRegex)[0];
       if (canAccess(chromePath)) installations.push(chromePath);
-    } catch (e) {
-      // Not installed.
+    } catch {
+      // nothing to do
     }
   });
 

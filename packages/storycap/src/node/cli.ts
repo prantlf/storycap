@@ -10,7 +10,7 @@ import { parseShardOptions } from './shard-utilities.js';
 
 async function showDevices(logger: Logger) {
   const devices = await getDeviceDescriptors();
-  devices.map(device => logger.log(device.name, JSON.stringify(device.viewport)));
+  devices.map(device => logger.log(device.userAgent, JSON.stringify(device.viewport)));
 }
 
 async function createOptions(): Promise<MainOptions> {

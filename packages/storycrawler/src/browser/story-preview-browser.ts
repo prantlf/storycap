@@ -73,6 +73,7 @@ export class StoryPreviewBrowser extends BaseBrowser {
   async setCurrentStory(story: Story, opt: { forceRerender?: boolean } = {}) {
     if (this._currentStory && this._currentStory.id === story.id && !!opt.forceRerender) {
       await this.page.evaluate(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (d: any) => window.postMessage(JSON.stringify(d), '*'),
         this.createPostmessageData(dummyStory),
       );
@@ -89,6 +90,7 @@ export class StoryPreviewBrowser extends BaseBrowser {
    * Logs debug message with the index number
    *
    **/
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected debug(...args: any[]) {
     this.logger.debug.apply(this.logger, [`[cid: ${this.idx}]`, ...args]);
   }
