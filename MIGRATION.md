@@ -23,7 +23,7 @@
 
 ```sh
 $ npm uninstall storybook-chrome-screenshot
-$ npm install storycap
+$ npm install @prantlf/storycap
 ```
 
 And edit SB addons installation:
@@ -32,7 +32,7 @@ And edit SB addons installation:
 /* .storybook/addons.js */
 
 //import 'storybook-chrome-screenshot/register';
-import 'storycap/register';
+import '@prantlf/storycap/register';
 ```
 
 ### Replace decorators
@@ -156,7 +156,7 @@ We dropped supporting knobs. You can write story with corresponding properties i
 
 ```sh
 $ npm uninstall zisui
-$ npm install storycap
+$ npm install @prantlf/storycap
 ```
 
 ### Simple mode
@@ -192,7 +192,7 @@ You should replace it:
 ```js
 /* .storybook/addons.js */
 
-import 'storycap/register';
+import '@prantlf/storycap/register';
 ```
 
 And you should edit `.storybook/config.js`:

@@ -12,10 +12,10 @@ It is primarily responsible for image generation necessary for Visual Testing su
 
 This is a fork of the original project with the following enhancements:
 
-* Support for Storybook 9 and newer [#1014](https://github.com/reg-viz/storycap/pull/1014)
-* Support for Storybook 10 and newer [#1015](https://github.com/reg-viz/storycap/pull/1015)
-* Up-to-date dependencies [#1016](https://github.com/reg-viz/storycap/pull/1016)
-* Possible to disable `nextStep()` advancement in headful browser mode [#1017](https://github.com/reg-viz/storycap/pull/1017)
+- Support for Storybook 9 and newer [#1014](https://github.com/reg-viz/storycap/pull/1014)
+- Support for Storybook 10 and newer [#1015](https://github.com/reg-viz/storycap/pull/1015)
+- Up-to-date dependencies [#1016](https://github.com/reg-viz/storycap/pull/1016)
+- Possible to disable `nextStep()` advancement in headful browser mode [#1017](https://github.com/reg-viz/storycap/pull/1017)
 
 <!-- toc -->
 
@@ -368,10 +368,10 @@ Examples:
 
 ## Environment Variables
 
-| Name              | Description |
-|:------------------|:------------|
+| Name              | Description                                                                                                                                                                                                              |
+| :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | STORYCAP_SHOW     | Set to `enabled` to start the browser in the headful mode instead of in the headless one. When using the headful mode, you'll have to execute `nextStep()` on the console to advance from one screenshot to another one. |
-| STORYCAP_NEXTSTEP | Set to `disabled`, if you want to make all screenshots in the headful mode in an unattended way, without advancing by the `nextStep()` execution. |
+| STORYCAP_NEXTSTEP | Set to `disabled`, if you want to make all screenshots in the headful mode in an unattended way, without advancing by the `nextStep()` execution.                                                                        |
 
 ## Multiple PNGs from 1 story
 

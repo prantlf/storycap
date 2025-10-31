@@ -14,7 +14,7 @@ export default defineConfig({
     alias: [
       {
         find: 'storycap', 
-        replacement: resolve(import.meta.dirname, 'node_modules', 'storycap', 'lib')
+        replacement: resolve(import.meta.dirname, 'node_modules', '@prantlf', 'storycap', 'lib')
       }
     ]
   },

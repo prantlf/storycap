@@ -4,14 +4,14 @@
 
 ### Features
 
-* Support Storybook 9 ([9b0f2de](https://github.com/prantlf/storycap/commit/9b0f2dea7cb5b9b07b2a06d9a42e312115e6a6b4))
-* Support Storybook 10 ([ff5fe0d](https://github.com/prantlf/storycap/commit/ff5fe0d7be809c5c4ba940d7c47a68868fb4dcff))
-* Upgrade dependencies ([02a706b](https://github.com/prantlf/storycap/commit/02a706b9b0744c6d22a453be27d9373c90b36249))
-* Allow disabling nextStep by STORYCAP_NEXTSTEP=disabled ([739101b](https://github.com/prantlf/storycap/commit/739101b106253cbd05ea69ddd2197dbb8d670bde))
+- Support Storybook 9 ([9b0f2de](https://github.com/prantlf/storycap/commit/9b0f2dea7cb5b9b07b2a06d9a42e312115e6a6b4))
+- Support Storybook 10 ([ff5fe0d](https://github.com/prantlf/storycap/commit/ff5fe0d7be809c5c4ba940d7c47a68868fb4dcff))
+- Upgrade dependencies ([02a706b](https://github.com/prantlf/storycap/commit/02a706b9b0744c6d22a453be27d9373c90b36249))
+- Allow disabling nextStep by STORYCAP_NEXTSTEP=disabled ([739101b](https://github.com/prantlf/storycap/commit/739101b106253cbd05ea69ddd2197dbb8d670bde))
 
 ### Chores
 
-* Fork the project ([3025ff0](https://github.com/prantlf/storycap/commit/3025ff0fb620daa5b9f46682090340fedfd94874))
+- Fork the project ([3025ff0](https://github.com/prantlf/storycap/commit/3025ff0fb620daa5b9f46682090340fedfd94874))
 
 ### BREAKING CHANGES
 
