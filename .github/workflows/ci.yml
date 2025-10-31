@@ -40,8 +40,8 @@ jobs:
       - run: yarn e2e ${{ matrix.example_dir }}
         env:
           CI: true
-      - run: yarn deploy:ci
-        if: ${{ github.ref_name == 'master' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CI: true
+      # - run: yarn deploy:ci
+      #   if: ${{ github.ref_name == 'master' }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     CI: true
