@@ -10,6 +10,13 @@
 Storycap crawls your Storybook and takes screenshot images.
 It is primarily responsible for image generation necessary for Visual Testing such as [reg-suit](https://github.com/reg-viz/reg-suit).
 
+This is a fork of the original project with the following enhancements:
+
+* Support for Storybook 9 and newer [#1014](https://github.com/reg-viz/storycap/pull/1014)
+* Support for Storybook 10 and newer [#1015](https://github.com/reg-viz/storycap/pull/1015)
+* Up-to-date dependencies [#1016](https://github.com/reg-viz/storycap/pull/1016)
+* Possible to disable `nextStep()` advancement in headful browser mode [#1017](https://github.com/reg-viz/storycap/pull/1017)
+
 <!-- toc -->
 
 - [Features](#features)
