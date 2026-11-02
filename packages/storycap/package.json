@@ -1,6 +1,6 @@
 {
   "name": "@mailbutler/storycap",
-  "version": "8.1.1-mailbutler.11",
+  "version": "8.1.1-mailbutler.12",
   "description": "A Storybook addon, Save the screenshot image of your stories! via puppeteer.",
   "engines": {
     "node": ">=20.11"

@@ -1539,7 +1539,7 @@
     yargs-parser "21.1.1"
 
 "@mailbutler/storycap@file:/Users/fabian/Coding/storycap/packages/storycap":
-  version "8.1.1-mailbutler.11"
+  version "8.1.1-mailbutler.12"
   resolved "file:packages/storycap"
   dependencies:
     "@prantlf/storycrawler" "^8.1.1"
