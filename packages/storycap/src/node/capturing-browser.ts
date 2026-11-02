@@ -186,6 +186,14 @@ export class CapturingBrowser extends StoryPreviewBrowser {
     await sleep(this.opt.stateChangeDelay);
   }
 
+  private async resetInputModality() {
+    // A trusted pointer click on a focusable element (e.g. a `click` variant) switches Chromium into mouse
+    // modality, after which programmatic focus (`focus` variants, component autofocus) no longer matches
+    // `:focus-visible`. That state survives blur and re-renders, so captures depended on which stories ran
+    // earlier on the same page. A trusted key press restores the default state for every capture.
+    await this.page.keyboard.press('Shift');
+  }
+
   private async resetIfTouched(screenshotOptions: StrictScreenshotOptions) {
     const story = this.currentStory;
     if (!this.touched || !story) return;
@@ -613,6 +621,7 @@ export class CapturingBrowser extends StoryPreviewBrowser {
     let defaultVariantSuffix: string | undefined;
 
     try {
+      await this.resetInputModality();
       await this.setCurrentStory(story, { forceRerender: true });
 
       if (this.mode === 'managed') {
