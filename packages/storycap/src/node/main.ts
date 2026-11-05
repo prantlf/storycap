@@ -28,7 +28,7 @@ async function bootCapturingBrowserAsWorkers(connection: StorybookConnection, op
     [...new Array(Math.max(opt.parallel, 1)).keys()].map(i => new CapturingBrowser(connection, opt, mode, i).boot()),
   );
   opt.logger.debug(`Started ${browsers.length} capture browsers`);
-  return { workers: browsers, closeWorkers: () => Promise.all(browsers.map(b => b.close.bind(b))) };
+  return { workers: browsers, closeWorkers: () => Promise.all(browsers.map(b => b.close())) };
 }
 
 function filterStories(flatStories: Story[], include: string[], exclude: string[]): Story[] {
@@ -115,7 +115,7 @@ export async function main(mainOptions: MainOptions) {
     throw error;
   } finally {
     // Shutdown workers and dispose connection.
-    closeWorkers();
+    await closeWorkers();
     logger.debug('Ended to dispose workers.');
     connection.disconnect();
     logger.debug('Ended to dispose connection.');
